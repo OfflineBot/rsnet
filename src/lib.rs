@@ -1,14 +1,10 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
-}
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+mod rsnet;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use rsnet::{
+    network::network::Network,
+    fc::fully_connected::FullyConnected,
+    conv::conv::ConvLayer,
+    activation::activation::Activation,
+};
+
