@@ -1,5 +1,5 @@
 
-use super::network::Network;
+use crate::Network;
 use crate::{
     rsnet::activation::activation::Activation, ConvLayer, FullyConnected
 };

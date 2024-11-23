@@ -1,5 +1,5 @@
 
-use super::network::Network;
+use crate::Network;
 
 impl Network {
     pub fn new() -> Self {
