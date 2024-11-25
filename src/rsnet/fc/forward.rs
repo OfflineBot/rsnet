@@ -10,7 +10,6 @@ impl FullyConnected {
     pub fn forward(&mut self, x: Array2<f32>) -> Array2<f32> {
         let z1 = x.dot(&self.weight) + &self.bias;
         self.forwarded = Some(z1.clone());
-        println!("NOT DONE YET!! Activations missin!");
         match self.activation {
             Act::ReLU => {
                 let a1 = relu(z1);
