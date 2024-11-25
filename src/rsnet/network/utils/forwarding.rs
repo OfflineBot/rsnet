@@ -15,6 +15,11 @@ impl Network {
     }
 
     pub fn forward_fc(&mut self, input: Array2<f32>) -> Array2<f32> {
-        input
+        let mut last_input = input;
+        for i in self.fully_connected.iter_mut() {
+            let new_input = i.forward(last_input);
+            last_input = new_input;
+        }
+        last_input
     }
 }

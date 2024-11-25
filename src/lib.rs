@@ -8,5 +8,6 @@ pub use rsnet::{
     conv::conv::ConvLayer,
     ndarray_trait::flatten_to_twod::FlattenTo2D,
     activation::activation::Activation,
+    activation::functions,
 };
 
